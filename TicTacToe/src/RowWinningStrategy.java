@@ -1,4 +1,17 @@
 public class RowWinningStrategy extends WinningStrategy{
+
+    public static RowWinningStrategy rowWinningStrategy;
+    private RowWinningStrategy() {}
+
+    public static RowWinningStrategy getInstance() {
+        if(rowWinningStrategy == null) {
+            synchronized (RowWinningStrategy.class) {
+                if(rowWinningStrategy == null)
+                    rowWinningStrategy = new RowWinningStrategy();
+            }
+        }
+        return rowWinningStrategy;
+    }
     @Override
     public int[] winningStrategy(Player player, Board board) {
         int boardSize = board.getSize();

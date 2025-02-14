@@ -1,4 +1,18 @@
 public class DiagonalWinningStrategy extends WinningStrategy{
+
+    public static DiagonalWinningStrategy diagonalWinningStrategy;
+    private DiagonalWinningStrategy() {}
+
+    public static DiagonalWinningStrategy getInstance() {
+        if(diagonalWinningStrategy == null) {
+            synchronized (DiagonalWinningStrategy.class) {
+                if(diagonalWinningStrategy == null)
+                    diagonalWinningStrategy = new DiagonalWinningStrategy();
+            }
+        }
+        return diagonalWinningStrategy;
+    }
+
     @Override
     public int[] winningStrategy(Player player, Board board) {
         int boardSize = board.getSize(), index = -1;
