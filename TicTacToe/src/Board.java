@@ -23,7 +23,7 @@ public class Board {
         boolean hasWon = winningStrategy.hasWon(player, this, ans);
         System.out.println(player.getFirstName() + " " + player .getLastName() + "  has marked " + ans[0] + " " + ans[1]);
         if(hasWon) {
-            System.out.println(player.getFirstName() + " "  +player.getLastName() + " hasWon!!");
+            System.out.println(player.getFirstName() + " "  +player.getLastName() + " has won!!");
         }
 
         return hasWon;

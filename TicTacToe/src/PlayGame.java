@@ -25,5 +25,7 @@ public class PlayGame {
             else hasWon = board.makeAMove(player2, winningStrategyMap.get(strategyKeys[moveIndex]));
             if(hasWon) break;
         }
+
+        System.out.println("***********************GAME-OVER*******************************");
     }
 }
