@@ -1,1 +1,2 @@
+## Patternpedia
 This repository provides an extensive catalog of design patterns categorized into Creational, Structural, and Behavioral paradigms. Each pattern includes a conceptual overview, UML representations, and language-agnostic principles, followed by concrete implementations in multiple programming languages. The repository aims to enhance software modularity, maintainability, and extensibility by demonstrating best practices in object-oriented design and
