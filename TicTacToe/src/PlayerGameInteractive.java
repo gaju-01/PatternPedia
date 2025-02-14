@@ -25,9 +25,9 @@ public class PlayerGameInteractive {
         player2.setLastName(scanner.next());
 
         Map<String, WinningStrategy> winningStrategyMap = new HashMap<>();
-        winningStrategyMap.put(strategyKeys[0], new RowWinningStrategy());
-        winningStrategyMap.put(strategyKeys[1], new ColumnWinningStrategy());
-        winningStrategyMap.put(strategyKeys[2], new DiagonalWinningStrategy());
+        winningStrategyMap.put(strategyKeys[0], RowWinningStrategy.getInstance());
+        winningStrategyMap.put(strategyKeys[1], ColumnWinningStrategy.getInstance());
+        winningStrategyMap.put(strategyKeys[2], DiagonalWinningStrategy.getInstance());
 
         int moves = size * size;
         while(moves-- != 0) {

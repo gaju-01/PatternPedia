@@ -14,9 +14,9 @@ public class PlayGame {
         Player player2 = new Player().setFirstName("Dan").setLastName("Morris").setSymbol('-');
 
         Map<String, WinningStrategy> winningStrategyMap = new HashMap<>();
-        winningStrategyMap.put(strategyKeys[0], new RowWinningStrategy());
-        winningStrategyMap.put(strategyKeys[1], new ColumnWinningStrategy());
-        winningStrategyMap.put(strategyKeys[2], new DiagonalWinningStrategy());
+        winningStrategyMap.put(strategyKeys[0], RowWinningStrategy.getInstance());
+        winningStrategyMap.put(strategyKeys[1], ColumnWinningStrategy.getInstance());
+        winningStrategyMap.put(strategyKeys[2], DiagonalWinningStrategy.getInstance());
 
         while(moves-- != 0) {
             int moveIndex = random.nextInt(3);
