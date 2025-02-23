@@ -4,13 +4,9 @@ This repository contains a comprehensive collection of design patterns, includin
 ## Note
 The code and the designs might differ based upon the application, use case and user prespective. The code in this github repo only includes the simpler design of the LLD problems. Please feel free to fork the repo and refactor based upon the requirement as this is not the final code. Below are some of the resources attached to standard LLS problems and design patterns. 
 
-## Singleton Design Pattern
-* https://refactoring.guru/design-patterns/singleton
-* https://www.geeksforgeeks.org/singleton-design-pattern
-
-## Builder Design Pattern
-* https://refactoring.guru/design-patterns/builder
-* https://www.geeksforgeeks.org/builder-design-pattern
+# Resources for design patterns
+* https://refactoring.guru
+* https://www.geeksforgeeks.org/java-design-patterns
 
 ## TicTacToe
 * https://medium.com/@avinashsoni9829/tic-tac-toe-low-level-design-f7ebefa88efc
