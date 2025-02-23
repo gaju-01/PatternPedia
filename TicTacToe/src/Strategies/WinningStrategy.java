@@ -1,7 +1,12 @@
-public abstract  class WinningStrategy {
-    abstract int[] winningStrategy(Player player, Board board);
+package Strategies;
 
-    int[] defaultStrategy(Player player, Board board) {
+import Board.Board;
+import Person.Player;
+
+public abstract  class WinningStrategy {
+    public abstract int[] winningStrategy(Player player, Board board);
+
+    public int[] defaultStrategy(Player player, Board board) {
         char[][] boardState = board.getBoard();
         int boardSize = board.getSize();
         int[] ans = {-1, - 1};
@@ -19,7 +24,7 @@ public abstract  class WinningStrategy {
         return ans;
     }
 
-    boolean hasWon(Player player, Board board, int[] ans) {
+    public boolean hasWon(Player player, Board board, int[] ans) {
         char[][] boardState = board.getBoard();
         boolean ok1 = true, ok2 = true, ok3 = true, ok4 = true;
         int i, size = board.getSize();

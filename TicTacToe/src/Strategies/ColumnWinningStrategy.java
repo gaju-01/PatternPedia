@@ -1,4 +1,9 @@
-public class ColumnWinningStrategy extends WinningStrategy{
+package Strategies;
+
+import Board.Board;
+import Person.Player;
+
+public class ColumnWinningStrategy extends WinningStrategy {
 
     public static ColumnWinningStrategy columnWinningStrategy;
     private ColumnWinningStrategy() {}

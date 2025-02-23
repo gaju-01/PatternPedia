@@ -1,3 +1,9 @@
+package Cinemas;
+
+import Enums.Language;
+import TheatreInfra.Auditorium;
+import TheatreInfra.Seat;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +24,7 @@ public class Show {
     List<Seat> seatList;
     boolean isBooked[];
 
-    Show() {
+    public Show() {
         this.id = cnt;
         this.seatList = new ArrayList<>();
         cnt++;
@@ -78,9 +84,9 @@ public class Show {
     }
 
     public void printDetails() {
-        System.out.println("Movie: "  + this.movie.getMovieName());
+        System.out.println("Cinemas.Movie: "  + this.movie.getMovieName());
         System.out.println("Lang: " + this.language);
-        System.out.println("Auditorium: " + this.auditorium.getAuditoriumName());
+        System.out.println("TheatreInfra.Auditorium: " + this.auditorium.getAuditoriumName());
         System.out.println("Timings: " + this.startTime + " - "  + this.endTime);
     }
 }

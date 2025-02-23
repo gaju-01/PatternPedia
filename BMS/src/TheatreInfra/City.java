@@ -1,3 +1,5 @@
+package TheatreInfra;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +9,7 @@ public class City {
 
     List<Theatre> theatreList;
 
-    City() {
+    public City() {
         this.theatreList = new ArrayList<>();
     }
     public City setCityName(String name) {

@@ -1,3 +1,7 @@
+package TheatreInfra;
+
+import Cinemas.Show;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +13,7 @@ public class Auditorium {
 
     List<Show> showList;
 
-    Auditorium() {
+    public Auditorium() {
         this.showList = new ArrayList<>();
         this.seatList = new ArrayList<>();
     }

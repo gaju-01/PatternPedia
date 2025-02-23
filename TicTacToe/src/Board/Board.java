@@ -1,3 +1,8 @@
+package Board;
+
+import Person.Player;
+import Strategies.WinningStrategy;
+
 public class Board {
     private int size;
     private char[][] board;

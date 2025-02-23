@@ -1,4 +1,9 @@
-public class DiagonalWinningStrategy extends WinningStrategy{
+package Strategies;
+
+import Board.Board;
+import Person.Player;
+
+public class DiagonalWinningStrategy extends WinningStrategy {
 
     public static DiagonalWinningStrategy diagonalWinningStrategy;
     private DiagonalWinningStrategy() {}

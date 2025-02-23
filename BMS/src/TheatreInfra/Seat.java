@@ -1,3 +1,8 @@
+package TheatreInfra;
+
+import Enums.SeatType;
+import TheatreInfra.Auditorium;
+
 public class Seat {
     private int seatNumber;
 
@@ -7,7 +12,7 @@ public class Seat {
 
     private static int cnt = 0;
 
-    Seat(SeatType seatType, Auditorium auditorium) {
+    public Seat(SeatType seatType, Auditorium auditorium) {
         this.seatNumber = cnt;
         this.seatType = seatType;
         this.auditorium = auditorium;

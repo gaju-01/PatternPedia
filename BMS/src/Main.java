@@ -1,3 +1,12 @@
+import Cinemas.Movie;
+import Cinemas.Show;
+import Enums.Language;
+import Enums.SeatType;
+import TheatreInfra.Auditorium;
+import TheatreInfra.City;
+import TheatreInfra.Seat;
+import TheatreInfra.Theatre;
+
 import java.util.*;
 
 public class Main {
