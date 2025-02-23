@@ -1,8 +1,15 @@
+import Board.Board;
+import Person.Player;
+import Strategies.ColumnWinningStrategy;
+import Strategies.DiagonalWinningStrategy;
+import Strategies.RowWinningStrategy;
+import Strategies.WinningStrategy;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class PlayerGameInteractive {
+public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

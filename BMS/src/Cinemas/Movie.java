@@ -1,3 +1,5 @@
+package Cinemas;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +8,7 @@ public class Movie {
 
     private List<Show> showList;
 
-    Movie(String name) {
+    public Movie(String name) {
         this.name = name;
         this.showList = new ArrayList<>();
     }

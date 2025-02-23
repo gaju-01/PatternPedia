@@ -1,3 +1,5 @@
+package Person;
+
 public class Player {
     private String firstName;
     private String lastName;

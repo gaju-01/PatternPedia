@@ -1,3 +1,5 @@
+package TheatreInfra;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +11,7 @@ public class Theatre {
 
     private List<Auditorium> auditoriumList;
 
-    Theatre() {
+    public Theatre() {
         this.auditoriumList = new ArrayList<>();
     }
 
