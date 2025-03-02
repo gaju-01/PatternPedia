@@ -1,5 +1,7 @@
 package TheatreInfra;
 
+import Cinemas.Movie;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,11 +11,14 @@ public class City {
 
     List<Theatre> theatreList;
 
+    List<Movie> movieList;
+
     public City() {
+        this.movieList = new ArrayList<>();
         this.theatreList = new ArrayList<>();
     }
     public City setCityName(String name) {
-        this.cityName = cityName;
+        this.cityName = name;
         return this;
     }
 
@@ -28,4 +33,16 @@ public class City {
         return this.theatreList;
     }
 
+    public void addMovie(Movie movie) {
+        synchronized (City.class) {
+            if (!this.movieList.contains(movie)) {
+                this.movieList.add(movie);
+                movie.addCity(this);
+            }
+        }
+    }
+
+    public List<Movie> getMovieList() {
+        return this.movieList;
+    }
 }

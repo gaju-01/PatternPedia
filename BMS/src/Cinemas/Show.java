@@ -2,6 +2,7 @@ package Cinemas;
 
 import Enums.Language;
 import TheatreInfra.Auditorium;
+import TheatreInfra.City;
 import TheatreInfra.Seat;
 
 import java.util.ArrayList;
@@ -24,6 +25,8 @@ public class Show {
     List<Seat> seatList;
     boolean isBooked[];
 
+    City city;
+
     public Show() {
         this.id = cnt;
         this.seatList = new ArrayList<>();
@@ -40,6 +43,9 @@ public class Show {
         this.auditorium = auditorium;
         this.auditorium.addShow(this);
         this.seatList = auditorium.getSeatList();
+        City city = this.auditorium.getTheatre().getCity();
+        this.city = city;
+        city.addMovie(movie);
         this.isBooked = new boolean[this.seatList.size()];
         return this;
     }
@@ -88,5 +94,13 @@ public class Show {
         System.out.println("Lang: " + this.language);
         System.out.println("TheatreInfra.Auditorium: " + this.auditorium.getAuditoriumName());
         System.out.println("Timings: " + this.startTime + " - "  + this.endTime);
+    }
+
+    public Auditorium getAuditorium() {
+        return this.auditorium;
+    }
+
+    public City getCity() {
+        return this.city;
     }
 }
