@@ -1,9 +1,9 @@
 package Vehicle;
 
-public class TwoWheeler {
-    String licenseNo;
+public class TwoWheeler extends Vehicle {
 
-    TwoWheeler(String licenseNo) {
-        this.licenseNo = licenseNo;
+    public TwoWheeler(String licenseNo) {
+        super(licenseNo);
     }
+
 }
