@@ -7,6 +7,7 @@ The code and the designs might differ based upon the application, use case and u
 # Resources for design patterns
 * https://refactoring.guru
 * https://www.geeksforgeeks.org/java-design-patterns
+* https://github.com/tssovi/grokking-the-object-oriented-design-interview
 
 ## TicTacToe
 * https://medium.com/@avinashsoni9829/tic-tac-toe-low-level-design-f7ebefa88efc
@@ -14,3 +15,6 @@ The code and the designs might differ based upon the application, use case and u
 ## BookMyShow
 * https://dev-shivansh95.medium.com/low-level-design-for-bookmyshow-8db8465e560a
 * https://www.geeksforgeeks.org/design-bookmyshow-a-system-design-interview-question
+
+## ParkingLot
+* https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-a-parking-lot.md
