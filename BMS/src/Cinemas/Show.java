@@ -9,23 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Show {
-    int id;
+    private int id;
 
-    Movie movie;
+    private Movie movie;
 
-    Auditorium auditorium;
+    private Auditorium auditorium;
 
-    Language language;
+    private Language language;
     private static int cnt = 0;
 
-    String startTime;
+    private String startTime;
 
-    String endTime;
+    private String endTime;
 
-    List<Seat> seatList;
-    boolean isBooked[];
+    private List<Seat> seatList;
+    private boolean isBooked[];
 
-    City city;
+    private  City city;
 
     public Show() {
         this.id = cnt;
@@ -94,10 +94,6 @@ public class Show {
         System.out.println("Lang: " + this.language);
         System.out.println("TheatreInfra.Auditorium: " + this.auditorium.getAuditoriumName());
         System.out.println("Timings: " + this.startTime + " - "  + this.endTime);
-    }
-
-    public Auditorium getAuditorium() {
-        return this.auditorium;
     }
 
     public City getCity() {

@@ -8,7 +8,7 @@ import java.util.List;
 public class Movie {
     private String name;
 
-    List<City> cityList;
+    private List<City> cityList;
 
     private List<Show> showList;
     public Movie(String name) {
