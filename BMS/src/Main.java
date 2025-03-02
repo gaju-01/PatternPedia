@@ -40,8 +40,8 @@ public class Main {
         System.out.println("************************************************************************************");
 
         City city = null;
+        System.out.println("Enter the city: ");
         while(city == null) {
-            System.out.println("Enter the city: ");
             char cityName = scanner.next().charAt(0);
             switch (cityName) {
                 case 'B':
@@ -59,30 +59,41 @@ public class Main {
 
         System.out.println("************************************************************************************");
 
-        List<Theatre> theatreList = city.getTheatres();
-        int size = theatreList.size(), i, j, k;
-        HashMap<Integer, Show> maps = new HashMap<>();
-        int cnt = 0;
-        for (i = 0; i < size; i++) {
-            List<Auditorium> auditoriums = theatreList.get(i).getAuditoriums();
-            for(j = 0; j< auditoriums.size(); j++) {
-                List<Show> showList = auditoriums.get(j).showList();
-                for(k = 0; k<  showList.size(); k++) {
-                    showList.get(k).printDetails();
-                    maps.put(cnt, showList.get(k));
-                    System.out.println("Enter " + cnt + " to book this show");
-                    System.out.println("************************************************************************************");
-                    cnt++;
-                }
+        int i, j, k, index;
+        List<Movie> movieList = city.getMovieList();
+        for(i = 0; i < movieList.size(); i++) {
+            Movie movie = movieList.get(i);
+            System.out.println("Enter " + i + " to select movie " + movie.getMovieName());
+        }
+
+        Movie movie = null;
+        System.out.println("Enter the movie number: ");
+        while(movie == null) {
+            index = scanner.nextInt();
+            if(index < movieList.size()  && index >= 0)
+                movie = movieList.get(index);
+            else
+                System.out.println("Enter the valid  number");
+        }
+
+        System.out.println("************************************************************************************");
+
+        List<Show> showList = movie.getShowList();
+        for(k = 0; k<  showList.size(); k++) {
+            City tempCity = showList.get(k).getCity();
+            if(tempCity.equals(city)) {
+                showList.get(k).printDetails();
+                System.out.println("Enter " + k + " to book this show");
+                System.out.println("************************************************************************************");
             }
         }
 
         System.out.println("Enter the show to book: ");
         Show show = null;
         while(show == null) {
-            int index = scanner.nextInt();
-            if(index < cnt)
-                show = maps.get(index);
+            index = scanner.nextInt();
+            if(index < showList.size() && index >= 0)
+                show = showList.get(index);
             else
                 System.out.println("Enter the valid show number");
         }
