@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Auditorium {
-    String auditoriumName;
-    Theatre theatre;
+    private String auditoriumName;
+    private Theatre theatre;
 
-    List<Seat> seatList;
+    private List<Seat> seatList;
 
-    List<Show> showList;
+    private List<Show> showList;
 
     public Auditorium() {
         this.showList = new ArrayList<>();
@@ -42,10 +42,6 @@ public class Auditorium {
 
     public void addShow(Show show) {
         this.showList.add(show);
-    }
-
-    public List<Show> showList() {
-        return this.showList;
     }
 
     public List<Seat> getSeatList() {

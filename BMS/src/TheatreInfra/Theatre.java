@@ -26,9 +26,6 @@ public class Theatre {
         return this;
     }
 
-    public String getTheatreName() {
-        return this.theatreName;
-    }
 
     public City getCity() {
         return this.city;
@@ -36,9 +33,5 @@ public class Theatre {
 
     public void addAuditorium(Auditorium auditorium) {
         this.auditoriumList.add(auditorium);
-    }
-
-    public List<Auditorium> getAuditoriums() {
-        return this.auditoriumList;
     }
 }

@@ -9,9 +9,9 @@ public class City {
 
     private String cityName;
 
-    List<Theatre> theatreList;
+    private List<Theatre> theatreList;
 
-    List<Movie> movieList;
+    private List<Movie> movieList;
 
     public City() {
         this.movieList = new ArrayList<>();
@@ -22,15 +22,8 @@ public class City {
         return this;
     }
 
-    public String getCityName() {
-        return this.cityName;
-    }
-
     public void addTheatre(Theatre theatre) {
         this.theatreList.add(theatre);
-    }
-    public List<Theatre> getTheatres() {
-        return this.theatreList;
     }
 
     public void addMovie(Movie movie) {

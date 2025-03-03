@@ -16,10 +16,10 @@ public class Ticket {
     private ParkingSpot parkingSpot;
 
     public Ticket(int no, Vehicle vehicle, LocalDateTime endTime, ParkingSpot parkingSpot) {
+        this.no = no;
         this.vehicle = vehicle;
         this.startTime = LocalDateTime.now();
         this.endTime = endTime;
-        this.no = no;
         this.vehicle.assignTicket(this);
         this.parkingSpot = parkingSpot;
     }

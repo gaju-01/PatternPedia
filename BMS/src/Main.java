@@ -12,29 +12,29 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        City Honavar = new City().setCityName("Honavar");
-        City Bangalore = new City().setCityName("Bangalore");
-        City Hyderabad = new City().setCityName("Hyderabad");
+        City honavar = new City().setCityName("Honavar");
+        City bangalore = new City().setCityName("Bangalore");
+        City hyderabad = new City().setCityName("Hyderabad");
 
-        Theatre Padmanjali = new Theatre().setTheatreName("Padmanjali").setCity(Honavar);
-        Theatre INOX = new Theatre().setTheatreName("INOX").setCity(Bangalore);
-        Theatre Cinesquare = new Theatre().setTheatreName("Cinesquare").setCity(Hyderabad);
+        Theatre padmanjali = new Theatre().setTheatreName("Padmanjali").setCity(honavar);
+        Theatre inox = new Theatre().setTheatreName("INOX").setCity(bangalore);
+        Theatre cinesquare = new Theatre().setTheatreName("Cinesquare").setCity(hyderabad);
 
-        Auditorium PadmanjaliAuditorium = new Auditorium().setAuditoriumName("PadmanjaliAuditorium").setTheatre(Padmanjali);
-        Auditorium INOXAuditorium = new Auditorium().setAuditoriumName("INOXAuditorium").setTheatre(INOX);
-        Auditorium CinesquareAuditorium = new Auditorium().setAuditoriumName("CinesquareAuditorium").setTheatre(Cinesquare);
+        Auditorium padmanjaliAuditorium = new Auditorium().setAuditoriumName("PadmanjaliAuditorium").setTheatre(padmanjali);
+        Auditorium inoxAuditorium = new Auditorium().setAuditoriumName("INOXAuditorium").setTheatre(inox);
+        Auditorium cinesquareAuditorium = new Auditorium().setAuditoriumName("CinesquareAuditorium").setTheatre(cinesquare);
 
-        Seat seat1 = new Seat(SeatType.GOLD, PadmanjaliAuditorium);
-        Seat seat2 = new Seat(SeatType.NORMAL, INOXAuditorium);
-        Seat seat3 = new Seat(SeatType.PLATINUM, CinesquareAuditorium);
+        Seat seat1 = new Seat(SeatType.GOLD, padmanjaliAuditorium);
+        Seat seat2 = new Seat(SeatType.NORMAL, inoxAuditorium);
+        Seat seat3 = new Seat(SeatType.PLATINUM, cinesquareAuditorium);
 
-        Movie Padmavat = new Movie("Padmavat");
-        Movie Kantara = new Movie("Kantara");
-        Movie Matrix = new Movie("Matrix");
+        Movie padmavat = new Movie("Padmavat");
+        Movie kantara = new Movie("Kantara");
+        Movie matrix = new Movie("Matrix");
 
-        Show show1 = new Show().setMovie(Padmavat).Auditorium(INOXAuditorium).setStartTime("10").setEndTime("12").setLang(Language.HINDI);
-        Show show2 = new Show().setMovie(Kantara).Auditorium(PadmanjaliAuditorium).setStartTime("10").setEndTime("12").setLang(Language.KANNADA);
-        Show show3 = new Show().setMovie(Matrix).Auditorium(CinesquareAuditorium).setStartTime("10").setEndTime("12").setLang(Language.TAMIL);
+        Show show1 = new Show().setMovie(padmavat).Auditorium(inoxAuditorium).setStartTime("10").setEndTime("12").setLang(Language.HINDI);
+        Show show2 = new Show().setMovie(kantara).Auditorium(padmanjaliAuditorium).setStartTime("10").setEndTime("12").setLang(Language.KANNADA);
+        Show show3 = new Show().setMovie(matrix).Auditorium(cinesquareAuditorium).setStartTime("10").setEndTime("12").setLang(Language.TAMIL);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("************************************************************************************");
@@ -45,13 +45,13 @@ public class Main {
             char cityName = scanner.next().charAt(0);
             switch (cityName) {
                 case 'B':
-                    city = Bangalore;
+                    city = bangalore;
                     break;
                 case 'H':
-                    city = Honavar;
+                    city = honavar;
                     break;
                 case 'D':
-                    city = Hyderabad;
+                    city = hyderabad;
                 default:
                     System.out.println("Please choose a valid city");
             }
