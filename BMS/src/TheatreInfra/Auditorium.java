@@ -44,10 +44,6 @@ public class Auditorium {
         this.showList.add(show);
     }
 
-    public List<Show> showList() {
-        return this.showList;
-    }
-
     public List<Seat> getSeatList() {
         return this.seatList;
     }

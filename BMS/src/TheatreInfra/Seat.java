@@ -23,8 +23,4 @@ public class Seat {
     public int getSeatNumber() {
         return this.seatNumber;
     }
-
-    public SeatType getSeatType() {
-        return this.seatType;
-    }
 }
