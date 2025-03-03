@@ -21,23 +21,23 @@ public class ColumnWinningStrategy extends WinningStrategy {
     @Override
     public int[] winningStrategy(Player player, Board board) {
         int boardSize = board.getSize();
-        int[] ans = {-1, -1};
+        int[] locationToBeMarked = {-1, -1};
 
-        for(int i = 0; i < boardSize; i++) {
+        for(int col = 0; col < boardSize; col++) {
             boolean ok = true;
-            int index = -1;
-            for(int j = 0; j < boardSize; j++) {
-                ok = ok && (board.getBoard()[j][i] == '\u0000' || board.getBoard()[j][i] == player.getSymbol());
-                if(board.getBoard()[j][i] == '\u0000') {
-                    index = j;
+            int rowTobeMarked = -1;
+            for(int row = 0; row < boardSize; row++) {
+                ok = ok && (board.getBoard()[row][col] == '\u0000' || board.getBoard()[row][col] == player.getSymbol());
+                if(board.getBoard()[row][col] == '\u0000') {
+                    rowTobeMarked = row;
                 }
             }
             if(ok) {
-                ans[0] = index;
-                ans[1]= i;
+                locationToBeMarked[0] = rowTobeMarked;
+                locationToBeMarked[1]= col;
                 break;
             }
         }
-        return ans;
+        return locationToBeMarked;
     }
 }

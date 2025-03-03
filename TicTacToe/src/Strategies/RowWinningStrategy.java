@@ -21,23 +21,23 @@ public class RowWinningStrategy extends WinningStrategy {
     public int[] winningStrategy(Player player, Board board) {
         int boardSize = board.getSize();
         char[][] boardState = board.getBoard();;
-        int[] ans = {-1, -1};
+        int[] locationToBeMarked = {-1, -1};
 
-        for(int i = 0; i < boardSize; i++) {
+        for(int row = 0; row < boardSize; row++) {
             boolean ok = true;
-            int index = -1;
-            for(int j = 0; j < boardSize; j++) {
-                ok = ok && (boardState[i][j] == '\u0000' || boardState[i][j] == player.getSymbol());
-                if(boardState[i][j] == '\u0000') {
-                    index = j;
+            int columTobeMarked = -1;
+            for(int col = 0; col < boardSize; col++) {
+                ok = ok && (boardState[row][col] == '\u0000' || boardState[row][col] == player.getSymbol());
+                if(boardState[row][col] == '\u0000') {
+                    columTobeMarked = col;
                 }
             }
             if(ok) {
-                ans[0] = i;
-                ans[1]= index;
+                locationToBeMarked[0] = row;
+                locationToBeMarked[1]= columTobeMarked;
                 break;
             }
         }
-        return ans;
+        return locationToBeMarked;
     }
 }
