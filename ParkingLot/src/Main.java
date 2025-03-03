@@ -13,28 +13,28 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Vehicle twoWheeler = new TwoWheeler("1");
-        Vehicle fourWheeler = new FourWheeler("2");
-        Vehicle fourWheeler2 = new FourWheeler("2");
+        Vehicle yamaha = new TwoWheeler("1");
+        Vehicle hundai = new FourWheeler("2");
+        Vehicle tata = new FourWheeler("2");
 
-        ParkingSpot s1 = new TwoWheelerParkingSpot(1, true, 1, ParkingStatus.AVAILABLE);
-        ParkingSpot s2 = new FourWheelerParkingSpot(2, false, 2, ParkingStatus.AVAILABLE);
-        ParkingSpot s3 = new FourWheelerParkingSpot(2, false, 2, ParkingStatus.RESERVED);
+        ParkingSpot twoWheelerParkingSpot1 = new TwoWheelerParkingSpot(1, true, 1, ParkingStatus.AVAILABLE);
+        ParkingSpot fourWheelerParkingSpot1 = new FourWheelerParkingSpot(1, false, 2, ParkingStatus.AVAILABLE);
+        ParkingSpot fourWheelerParkingSpot2 = new FourWheelerParkingSpot(2, false, 2, ParkingStatus.RESERVED);
 
-        Entrance e1 = new Entrance(1);
-        Entrance e2 = new Entrance(2);
+        Entrance northEntrance = new Entrance(1);
+        Entrance eastEntrance = new Entrance(2);
 
-        Exit ex1 = new Exit(1);
-        Exit ex2 = new Exit(2);
+        Exit southExit = new Exit(1);
+        Exit westExit = new Exit(2);
 
-        Ticket t1 = e1.generateTicket(1, s1, twoWheeler);
-        Ticket t2 = e2.generateTicket(2, s2, fourWheeler);
-        e1.generateTicket(3, s3, fourWheeler2);
+        Ticket ticketForTwoWheeler1 = northEntrance.generateTicket(1, twoWheelerParkingSpot1, yamaha);
+        Ticket ticketForFourWheeler1 = eastEntrance.generateTicket(2, fourWheelerParkingSpot1, hundai);
+        northEntrance.generateTicket(3, fourWheelerParkingSpot2, tata);
 
-        t1.printTicketDetails();
-        t2.printTicketDetails();
+        ticketForFourWheeler1.printTicketDetails();
+        ticketForTwoWheeler1.printTicketDetails();
 
-        ex1.checkTicket(t1);
-        ex2.checkTicket(t2);
+        westExit.checkTicket(ticketForFourWheeler1);
+        southExit.checkTicket(ticketForTwoWheeler1);
     }
 }

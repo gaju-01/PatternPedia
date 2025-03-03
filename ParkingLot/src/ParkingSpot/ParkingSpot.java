@@ -4,20 +4,19 @@ import Vehicle.Vehicle;
 
 public abstract class ParkingSpot {
 
-    private Vehicle vehicle;
-
-    private boolean isFree;
+    private int id;
 
     private int floor;
 
-   private int id;
+    private boolean isFree;
+    private Vehicle vehicle;
 
     private ParkingStatus parkingStatus;
 
     public ParkingSpot(int id, boolean isFree, int floor, ParkingStatus parkingStatus) {
-        this.isFree = isFree;
-        this.floor = floor;
         this.id = id;
+        this.floor = floor;
+        this.isFree = isFree;
         this.parkingStatus = parkingStatus;
     }
     public  boolean getIsFree() {
