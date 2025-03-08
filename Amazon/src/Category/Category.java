@@ -2,6 +2,7 @@ package Category;
 
 import Product.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Category {
@@ -15,6 +16,7 @@ public abstract class Category {
     public Category(int categoryId, String categoryName) {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
+        this.productList = new ArrayList<>();
     }
 
     public void addProduct(Product product) {

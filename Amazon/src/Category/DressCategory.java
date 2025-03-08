@@ -4,7 +4,7 @@ public class DressCategory extends  Category{
 
     public static volatile DressCategory dressCategory;
 
-    public static DressCategory getDressCategory(int categoryId, String categoryName) {
+    public static DressCategory getDressCategoryInstance(int categoryId, String categoryName) {
         if(dressCategory == null) {
             synchronized (DressCategory.class) {
                 if(dressCategory == null) {
