@@ -15,6 +15,12 @@ The code and the designs might differ based upon the application, use case and u
 ## BookMyShow
 * https://dev-shivansh95.medium.com/low-level-design-for-bookmyshow-8db8465e560a
 * https://www.geeksforgeeks.org/design-bookmyshow-a-system-design-interview-question
+* https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-a-movie-ticket-booking-system.md
 
 ## ParkingLot
 * https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-a-parking-lot.md
+* https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-a-parking-lot.md
+
+## Amazon
+* https://www.geeksforgeeks.org/amazon-low-level-designlld/
+* https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-amazon-online-shopping-system.md
