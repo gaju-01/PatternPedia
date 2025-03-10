@@ -24,3 +24,7 @@ The code and the designs might differ based upon the application, use case and u
 ## Amazon
 * https://www.geeksforgeeks.org/amazon-low-level-designlld/
 * https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-amazon-online-shopping-system.md
+
+## Library Management System
+* https://github.com/tssovi/grokking-the-object-oriented-design-interview/blob/master/object-oriented-design-case-studies/design-a-library-management-system.md
+* https://www.geeksforgeeks.org/library-management-system/
